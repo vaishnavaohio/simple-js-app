@@ -1,7 +1,19 @@
 
-let pokemonList = {
-    name: ["Bulbasaur", "Pikachu", "Charzard"],
-    height: [7, 3, 4],
-    types: ['grass', 'posion', 'fire']
-
-};
+let pokemonList = [
+{
+    name: "Pikachu",
+    color: "Yellow",
+    height: 3.50,
+},
+{
+    name: "Charzard",
+    color: "Orange",
+    height: 3.25,
+},
+{
+    name: "Slacking",
+    color: "Blue",
+    height: 4.5,
+}
+];
+    
