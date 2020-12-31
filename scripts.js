@@ -1,18 +1,18 @@
 
 let pokemonList = [
 {
-    name: "Pikachu",
-    color: "Yellow",
+    name: "pikachu",
+    types: ["grass"],
     height: 3.50,
 },
 {
-    name: "Charzard",
-    color: "Orange",
+    name: "charzard",
+    types: ["poision"],
     height: 3.25,
 },
 {
-    name: "Slacking",
-    color: "Blue",
+    name: "slacking",
+    types: ["fire"],
     height: 4.5,
 }
 ];
