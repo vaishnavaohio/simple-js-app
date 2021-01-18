@@ -1,37 +1,64 @@
-let pokemonRepository = function(){
-    let pokemonListValue = [
-    {
-        name: "pikachu",
-        types: ["grass", "flying"],
-        height: 3.50,
-    },
-    {
-        name: "charzard",
-        types: ["poision", "fire"],
-        height: 3.25,
-    },
-    {
-        name: "slacking",
-        types: ["fire", "air"],
-        height: 4.5,
-    }]  
-    return{
-        getAll:function(){
-            return pokemonListValue
-        },
-        Add: function(item){
-            pokemonListValue.push(item)
-        }
+let pokemonRepository = (function () {
+    let repository = [
+      {
+        name: "Bulbasaur",
+        height: 0.7,
+        types: ["grass", "poison"],
+      },
+      {
+        name: "Charizard",
+        height: 1.7,
+        types: ["fire", "flying"],
+      },
+      {
+        name: "Squirtle",
+        height: 1,
+        types: ["water"],
+      },
+    ];
+  
+    function add(pokemon) {
+      if (
+        typeof pokemon === "object" &&
+        "name" in pokemon &&
+        "height" in pokemon &&
+        "types" in pokemon
+      ) {
+        repository.push(pokemon);
+      } else {
+        console.log("pokemon is not correct");
+      }
     }
-
-}();
-pokemonRepository.Add({ name: 'pikachu' });
-//for loop looping through objects in pokemonList array
-pokemonRepository.getAll().forEach(function(pokemonLoop){
-    document.write(`<p>${pokemonLoop.name}</p>`)
-
-    if(pokemonLoop.height>3.30){
-        document.write("Wow, that’s big!")
+    function getAll() {
+      return repository;
     }
-   // pokemonList.foreach(pokemonLoop)
-})
+    function addListItem(pokemon){
+      let pokemonList = document.querySelector(".pokemon-list");
+      let listpokemon = document.createElement("li");
+      let button = document.createElement("button");
+      button.innerText = pokemon.name;
+      button.classList.add("button-class");
+      button.addEventListener('click', function (showDetails) {
+        console.log(showDetails);
+      });
+      listpokemon.appendChild(button);
+      pokemonList.appendChild(listpokemon);
+      
+    }
+    return {
+      add: add,
+      getAll: getAll,
+      addListItem: addListItem
+    };
+  })();
+  function showDetails(pokemon){
+    console.log(pokemon)
+  }
+  pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
+  
+  console.log(pokemonRepository.getAll());
+  
+  pokemonRepository.getAll().forEach(function (pokemon) {
+    pokemonRepository.addListItem(pokemon);
+  });
+  
