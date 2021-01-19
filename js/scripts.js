@@ -39,7 +39,7 @@ let pokemonRepository = (function () {
       button.innerText = pokemon.name;
       button.classList.add("button-class");
       button.addEventListener('click', function (showDetails) {
-        console.log(showDetails);
+        console.log(pokemon);
       });
       listpokemon.appendChild(button);
       pokemonList.appendChild(listpokemon);
@@ -51,8 +51,11 @@ let pokemonRepository = (function () {
       addListItem: addListItem
     };
   })();
-  function showDetails(pokemon){
-    console.log(pokemon)
+ 
+  function buttonListener (button) {
+    button.addEventListener('click', function () {
+      showDetails(pokemon);
+    });
   }
   pokemonRepository.add({ name: "Pikachu", height: 0.3, types: ["electric"] });
   
