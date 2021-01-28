@@ -2,14 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Pokemon</title>
-    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokedex App</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <h1>pokedex</h1>
-    <ul class="pokemon-list"></ul>
-    <script src="./js/promise-polyfill.js"></script>
-    <script src="./js/scripts.js"></script>
+    <header>
+   <h1>Pokedex</h1>
+    </header>
+
+    <ul class = "pokelist"></ul>
+
+    <button id='show-modal'></button>
+
+    <h1 id='modal-title'></h1>
+
+    <div id='modal-container'></div>
+
+    <div id=img-container></div>
+
+
+
+
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
