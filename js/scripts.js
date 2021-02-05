@@ -150,6 +150,10 @@ let pokemonRepository = (function () {
     }).then(function (details) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      // Now we add the details to the item
+>>>>>>> parent of 39c546f... Update scripts.js
 =======
       // Now we add the details to the item
 >>>>>>> parent of 39c546f... Update scripts.js
