@@ -34,6 +34,7 @@ let pokemonRepository = (function () {
         '<button type="button" class="btn" style="background-color: blue; color: white" data-toggle="modal" data-target="#myModal">See profile</button>'
       );
 
+      //append
       row.append(card);
       card.append(image);
       card.append(body);
@@ -86,9 +87,11 @@ let pokemonRepository = (function () {
     let pokemonHeight = $(
       "<p>" + "<strong>Height</strong>: " + pokemon.height + '"' + "</p>"
     );
+    // //creating element for type in modal content
     let pokemonTypes = $(
       "<p>" + "<strong>Type</strong>: " + pokemon.types + "</p>"
     );
+    // //creating element for abilities in modal content
     
     modalTitle.append(pokemonName);
     modalBody.append(imageFront);
@@ -146,6 +149,10 @@ let pokemonRepository = (function () {
       return response.json();
     }).then(function (details) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      // Now we add the details to the item
+>>>>>>> parent of 39c546f... Update scripts.js
       item.imageUrl = details.sprites.other.dream_world.front_default;
       item.imageUrlAnimated = details.sprites.versions["generation-v"]["black-white"].animated.front_default;
 =======
@@ -209,9 +216,12 @@ function search() {
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   ul = document.getElementById("myUL");
+  // li = ul.getElementsByTagName("");
   li = ul.querySelectorAll(".card");
   console.log(li)
+  // console.log(li[0].querySelector(".card-body").querySelector(".card-title"));
   for (i = 0; i < li.length; i++) {
+    // a = li[i].getElementsByTagName("a")[0];
     a = li[i].querySelector(".card-body").querySelector(".card-title");
     console.log(a.innerText);
     txtValue = a.textContent || a.innerText;
